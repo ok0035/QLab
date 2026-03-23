@@ -466,14 +466,27 @@ img {
 
   .header-inner {
     padding: 1rem;
+    flex-wrap: wrap;
   }
 
   .site-nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
     gap: 1rem;
+    padding-top: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-link {
     font-size: 0.85rem;
+    flex-shrink: 0;
   }
 
   .post-header .post-title {
