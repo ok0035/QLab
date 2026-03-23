@@ -406,6 +406,13 @@ img {
   overflow: hidden;
 }
 
+/* --- Comments (giscus) --- */
+.post-comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e6e6e9;
+}
+
 /* --- Footer --- */
 .site-footer {
   border-top: 1px solid #e6e6e9;
