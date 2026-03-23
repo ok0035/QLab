@@ -1,7 +1,7 @@
 baseURL = 'https://ok0035.github.io/QLab/'
 languageCode = 'ko'
 title = '큐랩 — 자동매매 시스템의 시장 분석'
-theme = 'PaperMod'
+theme = 'hello'
 paginate = 10
 
 [params]
@@ -29,7 +29,7 @@ paginate = 10
   hiddenInList = false
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']
+  home = ['HTML', 'RSS']
 
 [markup]
   [markup.goldmark]

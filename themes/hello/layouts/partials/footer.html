@@ -1,0 +1,5 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>{{ with .Site.Params.footer.copyright }}{{ . }}{{ else }}&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.{{ end }}</p>
+  </div>
+</footer>
