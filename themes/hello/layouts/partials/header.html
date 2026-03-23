@@ -1,6 +1,9 @@
 <header class="site-header">
   <div class="header-inner">
-    <a href="{{ .Site.BaseURL }}" class="site-logo">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}" class="site-logo">
+      <img src="{{ "logo.png" | relURL }}" alt="{{ .Site.Title }}" class="logo-img">
+      <span class="logo-text">큐랩</span>
+    </a>
     <nav class="site-nav">
       {{ range .Site.Menus.main }}
       <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>

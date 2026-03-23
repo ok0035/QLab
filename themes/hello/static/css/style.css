@@ -67,13 +67,26 @@ img {
 }
 
 .site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.2rem;
   font-weight: 700;
   color: #1e1f21;
   letter-spacing: -0.02em;
 }
 
-.site-logo:hover {
+.logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.logo-text {
+  transition: color 0.2s;
+}
+
+.site-logo:hover .logo-text {
   color: #5a6ded;
 }
 
