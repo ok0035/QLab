@@ -1,0 +1,58 @@
+baseURL = 'https://ok0035.github.io/QLab/'
+languageCode = 'ko'
+title = '큐랩 — 자동매매 시스템의 시장 분석'
+theme = 'PaperMod'
+paginate = 10
+
+[params]
+  author = '큐랩'
+  description = '자동매매 시스템을 직접 개발하고 운용하며, 비트코인 시장 분석과 트레이딩 인사이트를 공유합니다.'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowToc = false
+  defaultTheme = 'auto'
+  DateFormat = '2006-01-02'
+
+  [params.homeInfoParams]
+    Title = '큐랩 데일리 브리핑'
+    Content = '자동매매 시스템을 직접 개발하고 운용하며, 비트코인 시장 분석과 트레이딩 인사이트를 공유합니다.'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/ok0035'
+
+[params.cover]
+  hidden = false
+  hiddenInList = false
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menus.main]]
+  name = '홈'
+  url = '/'
+  weight = 1
+
+[[menus.main]]
+  name = '데일리 브리핑'
+  url = '/posts/'
+  weight = 2
+
+[[menus.main]]
+  name = '태그'
+  url = '/tags/'
+  weight = 3
+
+[params.assets]
+  favicon = '/favicon.ico'
+
+[params.footer]
+  copyright = '© 2026 큐랩. All rights reserved.'
