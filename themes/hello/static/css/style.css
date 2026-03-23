@@ -368,9 +368,8 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #e6e6e9;
+  margin-top: 2rem;
+  padding-top: 0;
 }
 
 .nav-prev, .nav-next {
@@ -408,9 +407,8 @@ img {
 
 /* --- Comments (giscus) --- */
 .post-comments {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e6e6e9;
+  margin-top: 2rem;
+  padding-top: 0;
 }
 
 /* --- Footer --- */
