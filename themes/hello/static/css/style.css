@@ -230,6 +230,18 @@ img {
   margin-top: 0.5rem;
 }
 
+/* --- Post Cover Image --- */
+.post-cover {
+  margin-bottom: 2rem;
+}
+
+.post-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e6e6e9;
+}
+
 /* --- Post Content (본문) --- */
 .post-content {
   font-size: 1rem;
