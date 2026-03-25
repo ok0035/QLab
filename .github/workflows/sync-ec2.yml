@@ -1,0 +1,30 @@
+name: Sync to EC2
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+concurrency:
+  group: sync-ec2
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/qb_lab
+
+            # develop 브랜치 최신화 (conflict 시 remote 기준)
+            git fetch origin develop
+            git checkout develop 2>/dev/null || git checkout -b develop origin/develop
+            git reset --hard origin/develop
+
+            echo "[QBLab] Synced to $(git log --oneline -1)"
