@@ -2,7 +2,7 @@ name: Sync to EC2
 
 on:
   push:
-    branches: [develop]
+    branches: [main, develop]
   workflow_dispatch:
 
 concurrency:
@@ -21,10 +21,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/qb_lab
+            BRANCH="${{ github.ref_name }}"
 
-            # develop 브랜치 최신화 (conflict 시 remote 기준)
-            git fetch origin develop
-            git checkout develop 2>/dev/null || git checkout -b develop origin/develop
-            git reset --hard origin/develop
+            git fetch origin "$BRANCH"
+            git checkout "$BRANCH" 2>/dev/null || git checkout -b "$BRANCH" "origin/$BRANCH"
+            git reset --hard "origin/$BRANCH"
 
-            echo "[QBLab] Synced to $(git log --oneline -1)"
+            echo "[QBLab] Synced $BRANCH to $(git log --oneline -1)"
