@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <script src="{{ "js/theme.js" | relURL }}" defer></script>
 </head>
-<body{{ if .IsHome }} class="is-home"{{ end }}>
+<body{{ if .IsHome }} class="is-home"{{ else if and .IsSection (eq .Section "posts") }} class="is-wide"{{ end }}>
   <div class="site-wrapper">
     {{ partial "header.html" . }}
     <main class="site-main">
